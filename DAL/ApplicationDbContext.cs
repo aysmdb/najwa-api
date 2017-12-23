@@ -12,7 +12,10 @@ namespace Najwa_Api.DAL
 
         }
 
-        public DbSet<Test> Test {get;set;}
-        public DbSet<Akun> Akun {get;set;}
+        public DbSet<Test> Test { get; set; }
+
+        public DbSet<Akun> Akun { get; set; }
+
+        public DbSet<TransaksiAkun> TransaksiAkun { get; set; }
     }
 }
