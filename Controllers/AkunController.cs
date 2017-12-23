@@ -19,7 +19,7 @@ namespace Najwa_Api.Controllers
         }
 
         [HttpGet]
-        [Route("/GetALl")]
+        [Route("GetAll")]
         [ProducesResponseType(typeof(IEnumerable<Akun>), 200)]
         public IActionResult GetAll()
         {
@@ -29,6 +29,7 @@ namespace Najwa_Api.Controllers
         }
 
         [HttpGet]
+        [Route("{id}")]
         [ProducesResponseType(typeof(Akun), 200)]
         public IActionResult GetSingle(Guid id)
         {

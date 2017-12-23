@@ -20,7 +20,7 @@ namespace Najwa_Api
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-		.UseUrls("http://192.168.1.157:5000")
+		//.UseUrls("http://192.168.1.157:5000")
                 .Build();
     }
 }

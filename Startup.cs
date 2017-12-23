@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,10 +43,10 @@ namespace Najwa_Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IAkunService, AkunService>();
-            services.AddSingleton<IAkunRepository, AkunRepository>();
-            services.AddSingleton<ITestService, TestService>();
-            services.AddSingleton<ITestRepository, TestRepository>();
+            services.AddScoped<IAkunService, AkunService>();
+            services.AddScoped<IAkunRepository, AkunRepository>();
+            services.AddScoped<ITestService, TestService>();
+            services.AddScoped<ITestRepository, TestRepository>();
             services.AddSingleton<IConfiguration>(Configuration);
 
             services.AddDbContext<ApplicationDbContext>(options => 
